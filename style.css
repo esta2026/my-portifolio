@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #0a0a0a; /* True pitch black */
-    color: #e5e5e5; /* Soft metallic silver/white for crisp contrast */
+    background: #0a0a0a; /* Deep pitch black */
+    color: #e5e5e5; /* Crisp metallic silver-white text */
     line-height: 1.7;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* --- Header Section --- */
 header {
-    background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%);
+    background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%); /* Pure grayscale dark gradient */
     color: #ffffff;
     text-align: center;
     padding: 70px 0;
@@ -32,7 +32,7 @@ header {
     height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #d4af37; /* Metallic Gold */
+    border: 2px solid #d4af37; /* Pure Metallic Gold */
     margin-bottom: 20px;
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,17 +41,17 @@ header {
 /* Reactive Profile Hover */
 .profile-image:hover {
     transform: scale(1.03) rotate(2deg);
-    border-color: #f3e5ab; /* Lighter vanilla gold */
+    border-color: #f3e5ab; /* Warm light vanilla gold */
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
 }
 
 /* --- Card Sections --- */
 section {
-    background: #111111; /* Polished Obsidian Black */
+    background: #111111; /* Polished Obsidian Jet Black */
     margin: 35px auto;
     padding: 35px;
     border-radius: 12px;
-    border: 1px solid #1a1a1a;
+    border: 1px solid #1a1a1a; /* Dark charcoal boundary */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
@@ -99,11 +99,11 @@ ul li {
     position: relative;
     padding-left: 25px;
     margin-bottom: 14px;
-    color: #cccccc;
+    color: #cccccc; /* Neutral mid-tone grey text */
 }
 
 ul li::before {
-    content: "✦"; /* Premium diamond star bullet */
+    content: "✦"; /* Gold diamond star bullet */
     position: absolute;
     left: 0;
     color: #d4af37;
@@ -112,7 +112,7 @@ ul li::before {
 }
 
 ul li:hover::before {
-    transform: scale(1.3); /* Bullet reacts to text cursor hover */
+    transform: scale(1.3);
 }
 
 /* --- Project Showcase --- */
@@ -132,7 +132,7 @@ ul li:hover::before {
     display: inline-block;
     margin-top: 15px;
     text-decoration: none;
-    color: #0a0a0a;
+    color: #0a0a0a; /* Stark dark text inside button for contrast */
     background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); /* Liquid gold gradient */
     padding: 12px 26px;
     border-radius: 6px;
@@ -153,8 +153,8 @@ ul li:hover::before {
 
 /* --- Code Blocks / Snippets --- */
 pre {
-    background: #050505;
-    color: #f3e5ab; /* Light gold monochrome text for code */
+    background: #050505; /* Pitch black code window */
+    color: #f3e5ab; /* Warm monochrome gold text for clean code readability */
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #1a1a1a;
@@ -167,7 +167,7 @@ pre {
 footer {
     text-align: center;
     background: #050505;
-    color: #555555; /* Elegantly muted dark gray text */
+    color: #555555; /* Neutral charcoal text */
     padding: 30px;
     margin-top: 60px;
     border-top: 1px solid #1a1a1a;
