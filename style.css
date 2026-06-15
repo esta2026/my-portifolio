@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Cinzel', 'Playfair Display', 'Inter', serif;
 }
 
 body {
-    background: #0f172a; /* Deep slate dark background */
-    color: #e2e8f0; /* Off-white for easy reading */
+    background: #0a0a0a; /* True pitch black */
+    color: #e5e5e5; /* Soft metallic silver/white for crisp contrast */
     line-height: 1.7;
 }
 
@@ -20,87 +20,106 @@ body {
 
 /* --- Header Section --- */
 header {
-    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%); /* Deep cosmic gradient */
-    color: white;
+    background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%);
+    color: #ffffff;
     text-align: center;
-    padding: 60px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 70px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15); /* Soft gold border tint */
 }
 
 .profile-image {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #10b981; /* Neon emerald accent ring */
+    border: 2px solid #d4af37; /* Metallic Gold */
     margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); /* Subtle glow effect */
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Reactive Profile Hover */
 .profile-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.03) rotate(2deg);
+    border-color: #f3e5ab; /* Lighter vanilla gold */
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
 }
 
 /* --- Card Sections --- */
 section {
-    background: #1e293b; /* Sleek dark card color */
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    transition: translateY 0.3s ease;
+    background: #111111; /* Polished Obsidian Black */
+    margin: 35px auto;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
+/* Reactive Card Lift */
 section:hover {
-    transform: translateY(-2px); /* Subtle lift on hover */
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.05);
 }
 
 h2 {
-    color: #10b981; /* Electric emerald green */
-    font-size: 1.8rem;
+    color: #d4af37; /* Pure Gold */
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
 }
 
-/* Sleek underline accent for headers */
+/* Minimalist Golden Accent Line */
 h2::after {
     content: '';
     display: block;
-    width: 40px;
-    height: 3px;
-    background: #10b981;
-    margin-top: 5px;
-    border-radius: 2px;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, transparent);
+    margin-top: 8px;
+    transition: width 0.3s ease;
+}
+
+section:hover h2::after {
+    width: 60px; /* Line expands reactively when the card is hovered */
 }
 
 ul {
-    list-style: none; /* Removed generic squares */
+    list-style: none;
     margin-left: 5px;
 }
 
-/* Custom modern bullet points */
+/* Custom Minimalist List Items */
 ul li {
     position: relative;
     padding-left: 25px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    color: #cccccc;
 }
 
 ul li::before {
-    content: "→";
+    content: "✦"; /* Premium diamond star bullet */
     position: absolute;
     left: 0;
-    color: #a855f7; /* Purple accent for list indicators */
-    font-weight: bold;
+    color: #d4af37;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover::before {
+    transform: scale(1.3); /* Bullet reacts to text cursor hover */
 }
 
 /* --- Project Showcase --- */
 .project {
     margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 25px;
+    border-bottom: 1px solid #1a1a1a;
 }
 
 .project:last-child {
@@ -113,39 +132,45 @@ ul li::before {
     display: inline-block;
     margin-top: 15px;
     text-decoration: none;
-    color: #0f172a;
-    background: #10b981;
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.2s ease-in-out;
+    color: #0a0a0a;
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); /* Liquid gold gradient */
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Reactive Button Hover */
 .project a:hover {
-    background: #34d399;
-    box-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px);
 }
 
 /* --- Code Blocks / Snippets --- */
 pre {
-    background: #090d16;
-    color: #38bdf8; /* Cyberpunk cyan text for code */
+    background: #050505;
+    color: #f3e5ab; /* Light gold monochrome text for code */
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid #1a1a1a;
     font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9rem;
     overflow-x: auto;
 }
 
 /* --- Footer --- */
 footer {
     text-align: center;
-    background: #090d16;
-    color: #64748b; /* Muted grey text */
-    padding: 25px;
-    margin-top: 50px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.9rem;
+    background: #050505;
+    color: #555555; /* Elegantly muted dark gray text */
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 }
