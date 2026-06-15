@@ -1,85 +1,151 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-body{
-    background:#f4f4f4;
-    color:#333;
-    line-height:1.6;
+body {
+    background: #0f172a; /* Deep slate dark background */
+    color: #e2e8f0; /* Off-white for easy reading */
+    line-height: 1.7;
 }
 
-.container{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
 }
 
-header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:40px 0;
+/* --- Header Section --- */
+header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%); /* Deep cosmic gradient */
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.profile-image{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid white;
-    margin-bottom:15px;
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #10b981; /* Neon emerald accent ring */
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); /* Subtle glow effect */
+    transition: transform 0.3s ease;
 }
 
-section{
-    background:white;
-    margin:20px auto;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.profile-image:hover {
+    transform: scale(1.05);
 }
 
-h2{
-    color:#0d6efd;
-    margin-bottom:15px;
+/* --- Card Sections --- */
+section {
+    background: #1e293b; /* Sleek dark card color */
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: translateY 0.3s ease;
 }
 
-ul{
-    list-style:square;
-    margin-left:20px;
+section:hover {
+    transform: translateY(-2px); /* Subtle lift on hover */
 }
 
-.project{
-    margin-bottom:20px;
+h2 {
+    color: #10b981; /* Electric emerald green */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
 }
 
-.project a{
-    display:inline-block;
-    margin-top:10px;
-    text-decoration:none;
-    color:white;
-    background:#0d6efd;
-    padding:10px 15px;
-    border-radius:5px;
+/* Sleek underline accent for headers */
+h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #10b981;
+    margin-top: 5px;
+    border-radius: 2px;
 }
 
-.project a:hover{
-    background:#084298;
+ul {
+    list-style: none; /* Removed generic squares */
+    margin-left: 5px;
 }
 
-pre{
-    background:#eee;
-    padding:15px;
-    border-radius:5px;
-    overflow-x:auto;
+/* Custom modern bullet points */
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
 }
 
-footer{
-    text-align:center;
-    background:#222;
-    color:white;
-    padding:15px;
-    margin-top:20px;
+ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #a855f7; /* Purple accent for list indicators */
+    font-weight: bold;
+}
+
+/* --- Project Showcase --- */
+.project {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0f172a;
+    background: #10b981;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.project a:hover {
+    background: #34d399;
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
+    transform: translateY(-1px);
+}
+
+/* --- Code Blocks / Snippets --- */
+pre {
+    background: #090d16;
+    color: #38bdf8; /* Cyberpunk cyan text for code */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: 'Fira Code', 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    background: #090d16;
+    color: #64748b; /* Muted grey text */
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
 }
